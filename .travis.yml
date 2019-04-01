@@ -1,7 +1,6 @@
 language: java
-before_install: 
-  - ant
-  - ant
+before_install: ant init-ivy
+install: ant resolve
   
 after_success:
 - bash <(curl -s https://scripts.scantist.com/staging/ci-travis-jar.sh)
