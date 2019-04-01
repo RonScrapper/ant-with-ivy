@@ -1,5 +1,5 @@
 language: java
-
+install: ant resolve
 
 after_success:
 - bash <(curl -s https://scripts.scantist.com/staging/ci-travis-jar.sh)
