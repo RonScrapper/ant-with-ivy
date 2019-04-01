@@ -1,0 +1,6 @@
+language: java
+install: ant deps
+
+
+after_success:
+- bash <(curl -s https://scripts.scantist.com/staging/ci-travis-jar.sh)
