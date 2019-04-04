@@ -3,6 +3,7 @@ before_install: ant init-ivy
 install: 
   - ant build
   - ant report
+  - ant get-deps
 
 jdk:
   - oraclejdk11
