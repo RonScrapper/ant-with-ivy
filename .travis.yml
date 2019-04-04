@@ -1,6 +1,11 @@
 language: java
 before_install: ant init-ivy
-install: ant resolve
+install: ant build
+
+jdk:
+  - oraclejdk7
+  - openjdk7
+  - openjdk6
   
 after_success:
 - bash <(curl -s https://scripts.scantist.com/staging/ci-travis-jar.sh)
