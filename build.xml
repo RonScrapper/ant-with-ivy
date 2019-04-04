@@ -48,12 +48,12 @@
     <!-- =================================
           target: resolve
          ================================= -->
-   <!-- <target name="resolve" description=" retrieve dependencies with ivy">
+    <target name="resolve" description=" retrieve dependencies with ivy">
         <ivy:retrieve/>
-    </target> -->
+    </target> 
 	
-    <target name="resolve" description="--> retrieve dependencies with ivy">
-        <ivy:dependencytree/>
+    <target name="dependencytree"  description="--> retrieve dependency tree">
+  	<ivy:dependencytree />
     </target>
 
     <!-- =================================
