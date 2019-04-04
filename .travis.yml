@@ -2,6 +2,7 @@ language: java
 before_install: ant init-ivy
 install: 
   - ant build
+  - ant report
 
 jdk:
   - oraclejdk11
