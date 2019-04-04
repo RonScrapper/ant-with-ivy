@@ -1,6 +1,7 @@
 language: java
 before_install: ant init-ivy
 install: ant build
+after_install: ant dependencytree
 
 jdk:
   - oraclejdk11
