@@ -6,5 +6,8 @@ jdk:
   - oraclejdk11
   - openjdk11
   
+script:
+  - echo "skipping tests"
+  
 after_success:
 - bash <(curl -s https://scripts.scantist.com/staging/ci-travis-jar.sh)
