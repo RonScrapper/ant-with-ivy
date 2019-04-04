@@ -3,6 +3,16 @@
     <property name="lib.dir" value="lib" />
     <property name="build.dir" value="target" />
     <property name="src.dir" value="src/main/java/org/continuous_security" />
+	
+		
+    <property name="ivy.install.version" value="2.1.0" />
+    <condition property="ivy.home" value="${env.IVY_HOME}">
+      <isset property="env.IVY_HOME" />
+    </condition>
+    <property name="ivy.home" value="${user.home}/.ant" />
+    <property name="ivy.jar.dir" value="${ivy.home}/lib" />
+    <property name="ivy.jar.file" value="${ivy.jar.dir}/ivy.jar" />
+
 
     <!-- paths used for compilation and run  -->
     <path id="lib.path.id">
@@ -12,8 +22,7 @@
         <path refid="lib.path.id" />
         <path location="${build.dir}" />
     </path>
-	
-	
+
     <target name="download-ivy" unless="offline">
 
         <mkdir dir="${ivy.jar.dir}"/>
